@@ -28,6 +28,23 @@ export const ListItem = S.li `
   display: inline-block;
 `;
 
+export const LabelId = S.span `
+  display: block;
+  font-size: 12px;
+`;
+
+export const LabelTitle = S.span `
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+export const LabelDescription = S.span `
+  display: block;
+  font-size: 16px;
+  color: #7a7a7a;
+`;
+
 export const Button = S.button `
   top: 0.5rem;
   right: 0.5rem;

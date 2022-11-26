@@ -1,11 +1,11 @@
 import S from "styled-components";
 
 export const Title = S.h3 `
-  font-size: 20px;
+  font-size: 22px;
 `;
 
 export const Counter = S.small `
-  color: #999;
+  color: #aaa;
   font-weight: normal;
   font-size: 14px;
 `;

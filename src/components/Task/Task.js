@@ -1,7 +1,11 @@
 import React from 'react'
 
 import './Usuario.css'
-import { Task,
+import { 
+  Task,
+  LabelId,
+  LabelTitle,
+  LabelDescription,
   Button
 } from './Style'
 
@@ -9,9 +13,9 @@ function Usuario(props) {
   return (
     <Task>
       <input type="checkbox" id={'task-'+props.usuario.id} name={'task-'+props.usuario.id} value={'task-'+props.usuario.id} />
-        #{props.usuario.id}
-        {props.usuario.nome}
-        {props.usuario.sobrenome}
+        <LabelId>#{props.usuario.id}</LabelId>
+        <LabelTitle>{props.usuario.nome}</LabelTitle>
+        <LabelDescription>{props.usuario.sobrenome}</LabelDescription>
       <Button onClick={props.removerUsuario}>&times;</Button>
     </Task>
   )
