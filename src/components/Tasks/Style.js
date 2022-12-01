@@ -1,4 +1,9 @@
 import S from "styled-components";
+import styles from '../../assets/css/variables';
+
+export const HeaderBackground = S.div `
+  background-color: ${styles.color.base.gray700}};
+`;
 
 export const Title = S.h3 `
   font-size: 22px;
