@@ -1,24 +1,27 @@
 import React from 'react'
 
-import './Usuario.css'
 import { 
-  Task,
+  Box,
   LabelId,
   LabelTitle,
-  LabelDescription,
   Button
 } from './Style'
 
-function Usuario(props) {
+function Task(props) {
   return (
-    <Task>
-      <input type="checkbox" id={'task-'+props.usuario.id} name={'task-'+props.usuario.id} value={'task-'+props.usuario.id} />
-        <LabelId>#{props.usuario.id}</LabelId>
-        <LabelTitle>{props.usuario.nome}</LabelTitle>
-        <LabelDescription>{props.usuario.sobrenome}</LabelDescription>
-      <Button onClick={props.removerUsuario}>&times;</Button>
-    </Task>
+    <Box>
+      <input type="checkbox"
+        id={'task-'+props.usuario.id}
+        name={'task-'+props.usuario.id}
+        value={'task-'+props.usuario.id}
+        checked={props.usuario.completed}
+        onChange={props.completeTask}
+      />
+      <LabelId>#{props.usuario.id}</LabelId>
+      <LabelTitle>{props.usuario.title}</LabelTitle>
+      <Button onClick={props.removeTask}>&times;</Button>
+    </Box>
   )
 }
 
-export default Usuario
+export default Task
