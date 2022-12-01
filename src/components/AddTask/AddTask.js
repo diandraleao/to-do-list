@@ -3,11 +3,8 @@ import React, { useState } from 'react'
 import { 
   Task,
   Linha,
-  Label,
-  Title,
   Input,
-  Button,
-  FooterLabel
+  Button
 } from './Style'
 import { ADD_TASK } from '../../utils/strings/pt-BR'
 
@@ -38,24 +35,14 @@ function AddTask(props) {
 
   return (
     <Task>
-      <Title>{ADD_TASK.title}</Title>
       <form onSubmit={onSubmitHandler}>
         <Linha>
-          <Label>{ADD_TASK.labelTitle}</Label>
           <Input
             type="text"
             name="nome"
             value={nome}
+            placeholder={ADD_TASK.labelTask}
             onChange={event => setNome(event.target.value)}
-            required />
-        </Linha>
-        <Linha>
-          <Label>{ADD_TASK.labelDescription}</Label>
-          <Input
-            type="text"
-            name="sobrenome"
-            value={sobrenome}
-            onChange={event => setSobrenome(event.target.value)}
             required />
         </Linha>
         
@@ -63,7 +50,6 @@ function AddTask(props) {
           {ADD_TASK.labelButton}
         </Button>
       </form>
-      <FooterLabel>{ADD_TASK.labelFooter}</FooterLabel>
     </Task>
   )
 }
