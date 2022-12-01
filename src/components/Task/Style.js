@@ -1,6 +1,6 @@
 import S from "styled-components";
 
-export const Task = S.div `
+export const Box = S.div `
   padding: 1.5rem;
   position: relative;
   margin: 1rem 0;
@@ -37,12 +37,6 @@ export const LabelTitle = S.span `
   display: block;
   font-size: 18px;
   font-weight: 700;
-`;
-
-export const LabelDescription = S.span `
-  display: block;
-  font-size: 16px;
-  color: #7a7a7a;
 `;
 
 export const Button = S.button `
