@@ -1,26 +1,46 @@
 import S from "styled-components";
+import styles from '../../assets/css/variables';
 
 export const Task = S.div `
-  display: block;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 100vw;
 `;
-export const Linha = S.div `
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -.5rem;
-  padding: .5rem 0;
+
+export const Container = S.div `
+  width: 736px;
+  position: absolute;
+  top: 135px;
+  justify-self: center;
+  align-self: center;
 `;
+
+export const Title = S.h1 `
+  font-size: ${styles.fontSize.md};
+  color: ${styles.color.product.blue};
+  margin-bottom: ${styles.space.xs};
+`;
+
 export const Input = S.input `
-  display: block;
-  width: 100%;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  display: inline-block;
+  width: 625px;
+  background-color: ${styles.color.base.gray500};
+  border: 1px solid ${styles.color.base.gray700};
+  padding: ${styles.space.md};
+  margin-right: ${styles.space.xs};
+  font-size: ${styles.fontSize.lg};
+  font-weight: ${styles.fontWeight.normal};
+  line-height: ${styles.lineHeight};
   color: #495057;
-  background-color: #FFF;
-  border: 1px solid #FFBCD8;
-  border-radius: 8px;
+  border-radius: ${styles.borderRadius};
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  
+  ::placeholder {
+    color: ${styles.color.base.gray300};
+  }
+
 
   &:focus {
     outline: 0;
@@ -29,28 +49,26 @@ export const Input = S.input `
   }
 `;
 export const Button = S.button `
-color: #FFF;
-cursor: pointer;
-display: inline-block;
-background-color: #FF6CA8;
-text-align: center;
-vertical-align: middle;
-border: 1px solid transparent;
-padding: 8px 16px;
-margin-top: 16px;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-border-radius: 8px;
-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  background-color: ${styles.color.product.blueDark};
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: ${styles.space.md};
+  font-weight: ${styles.fontWeight.normal};
+  font-size: ${styles.fontSize.lg};
+  line-height: ${styles.lineHeight};
+  border-radius: ${styles.borderRadius};
 
-&:hover {
-  background-color: #DA3C78;
-}
+  &:hover {
+    background-color: ${styles.color.product.blue};
+  }
 
-&:focus {
-  outline: 0;
-  border-color: #FF8CC8;
-  box-shadow: 0 0 0 .2rem rgba(255, 188, 216, .5);
-}
+  &:focus {
+    outline: 0;
+    border-color: ${styles.color.product.blueDark};
+    box-shadow: 0 0 0 1px rgba(255, 188, 216, .5);
+  }
 `;
