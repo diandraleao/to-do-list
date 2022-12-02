@@ -26,6 +26,19 @@ export default {
     xl: "18px"
   },
 
-  lineHeight: "140%"
+  fontWeight: {
+    normal: 400,
+    bold: 700
+  },
+
+  space: {
+    xs: "8px",
+    sm: "12px",
+    md: "16px",
+    lg: "24px"
+  },
+
+  lineHeight: "140%",
+  borderRadius: "8px"
 
 }
