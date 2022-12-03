@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 import AddTask from '../AddTask/AddTask'
 import Task from '../Task/Task'
-import { List, ListItem, Title, Counter, HeaderBackground } from './Style'
-import { LIST_TASK } from '../../utils/strings/pt-BR'
+import Empty  from '../Empty/Empty'
+
+import * as S from './Style'
 import mocks from '../../utils/mocks/tasks'
+import Logo from '../../assets/img/todo_logo.png'
 
 function Tasks() {
 
@@ -15,7 +17,7 @@ function Tasks() {
   }, [])
 
   const addTask = task => {
-    //setTasks(currentTask => [...currentTask, task])
+    // setTasks(currentTask => [...currentTask, task])
     console.log('addTask')
   }
 
@@ -26,24 +28,25 @@ function Tasks() {
   const completeTask = _ => {
     console.log('completeTask')
   }
-  
+
   return (
     <> 
-      <HeaderBackground>
+      <S.HeaderBackground>
+        <S.BoxLogo>
+          <S.Image src={Logo} alt='Logo to-do' />
+        </S.BoxLogo>
         <AddTask addTask={addTask} />
-      </HeaderBackground>
-      <Title>{LIST_TASK.title} <Counter>({tasks.length})</Counter></Title>
-      <List>
-        {tasks.map(task => (
-          <ListItem>
-            <Task key={task.id}
-              usuario={task}
-              removeTask={() => removeTask(task)}
-              completeTask={() => completeTask(task)}
-            />
-          </ListItem>
-        ))}
-      </List>
+      </S.HeaderBackground>
+      <S.Container>
+        <div>
+        <S.List>
+          {(tasks.length > 0) ?
+          <Task tasks={tasks}
+          removeTask={() =>removeTask()}
+          completeTask={() =>completeTask()} />
+          : <Empty />}
+        </S.List></div>
+      </S.Container>
     </>
   )
 }
