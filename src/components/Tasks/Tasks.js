@@ -40,11 +40,13 @@ function Tasks() {
       <S.Container>
         <div>
         <S.List>
-          {(tasks.length > 0) ?
-          <Task tasks={tasks}
-          removeTask={() =>removeTask()}
-          completeTask={() =>completeTask()} />
-          : <Empty />}
+          {
+            (tasks.length > 0) ?
+            <Task tasks={tasks}
+            removeTask={() =>removeTask()}
+            completeTask={() =>completeTask()} />
+            : <Empty />
+          }
         </S.List></div>
       </S.Container>
     </>
