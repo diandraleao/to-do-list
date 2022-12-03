@@ -11,7 +11,7 @@ export const Task = S.div `
 export const Container = S.div `
   width: 736px;
   position: absolute;
-  top: 135px;
+  top: 150px;
   justify-self: center;
   align-self: center;
 `;
@@ -24,7 +24,7 @@ export const Title = S.h1 `
 
 export const Input = S.input `
   display: inline-block;
-  width: 625px;
+  width: 603px;
   background-color: ${styles.color.base.gray500};
   border: 1px solid ${styles.color.base.gray700};
   padding: ${styles.space.md};
@@ -41,15 +41,9 @@ export const Input = S.input `
     color: ${styles.color.base.gray300};
   }
 
-
-  &:focus {
-    outline: 0;
-    border-color: #FF8CC8;
-    box-shadow: 0 0 0 .2rem rgba(255, 188, 216, .5);
-  }
 `;
 export const Button = S.button `
-  color: #FFF;
+  color: ${styles.color.base.gray100};
   cursor: pointer;
   display: inline-block;
   background-color: ${styles.color.product.blueDark};
@@ -64,11 +58,14 @@ export const Button = S.button `
 
   &:hover {
     background-color: ${styles.color.product.blue};
+    transition: all 0.25s ease;
   }
 
   &:focus {
-    outline: 0;
-    border-color: ${styles.color.product.blueDark};
-    box-shadow: 0 0 0 1px rgba(255, 188, 216, .5);
+    filter: brightness(60%);
+  }
+  
+  img {
+    margin-left: ${styles.space.xs};
   }
 `;
