@@ -17,8 +17,8 @@ function Tasks() {
   }, [])
 
   const addTask = task => {
-    // setTasks(currentTask => [...currentTask, task])
-    console.log('addTask')
+    setTasks(currentTask => [...currentTask, task])
+    console.log('task added')
   }
 
   const removeTask = _ => {
