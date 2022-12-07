@@ -2,6 +2,7 @@ export const ADD_TASK = {
   title: 'Nova Tarefa*',
   labelTask: 'Adicione uma nova tarefa',
   labelButton: 'Criar',
+  errorMessage: 'Digite uma tarefa'
 };
 
 export const LIST_TASK = {
