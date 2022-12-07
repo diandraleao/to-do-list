@@ -5,7 +5,7 @@ import Task from '../Task/Task'
 import Empty  from '../Empty/Empty'
 
 import * as S from './Style'
-import mocks from '../../utils/mocks/tasks'
+// import mocks from '../../utils/mocks/tasks'
 import Logo from '../../assets/img/todo_logo.png'
 
 function Tasks() {
@@ -13,7 +13,7 @@ function Tasks() {
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {
-    setTasks(mocks)
+    // setTasks(mocks)
   }, [])
 
   const addTask = task => {
@@ -43,8 +43,8 @@ function Tasks() {
           {
             (tasks.length > 0) ?
             <Task tasks={tasks}
-            removeTask={() =>removeTask()}
-            completeTask={() =>completeTask()} />
+            removeTask={removeTask}
+            completeTask={completeTask} />
             : <Empty />
           }
         </S.List></div>
