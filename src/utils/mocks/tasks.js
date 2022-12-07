@@ -1,17 +1,12 @@
 export default [
-  {
-    "id": 1,
-    "title": "Check e-mail",
-    "completed": true
-  },
-  {
-    "id": 2,
-    "title": "Submit documentation",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "title": "Study",
-    "completed": false
-  }
+    {
+      "id": 2,
+      "title": "Checar e-mail",
+      "completed": false,
+    },
+    {
+      "id": 3,
+      "title": "Estudar",
+      "completed": true,
+    }
 ]
