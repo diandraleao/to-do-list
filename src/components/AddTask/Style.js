@@ -18,7 +18,7 @@ export const Container = S.div `
 
 export const Title = S.h1 `
   font-size: ${styles.fontSize.md};
-  color: ${styles.color.product.blue};
+  color: ${styles.color.product.blueLight};
   margin-bottom: ${styles.space.xs};
 `;
 
@@ -41,6 +41,10 @@ export const Input = S.input `
     color: ${styles.color.base.gray300};
   }
 
+  :focus {
+    color: ${styles.color.base.gray100};
+  }
+
 `;
 export const Button = S.button `
   color: ${styles.color.base.gray100};
@@ -57,7 +61,7 @@ export const Button = S.button `
   border-radius: ${styles.borderRadius};
 
   &:hover {
-    background-color: ${styles.color.product.blue};
+    background-color: ${styles.color.product.blueLight};
     transition: all 0.25s ease;
   }
 

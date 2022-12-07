@@ -4,7 +4,8 @@ export default {
     product: {
       purple: "#8284FA",
       purpleDark: "#5E60CE",
-      blue: "#4EA8DE",
+      blueLight: "#4EA8DE",
+      blue: "#0b0f51",
       blueDark: "#1E6F9F"
     },
     base: {
