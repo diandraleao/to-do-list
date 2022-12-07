@@ -2,40 +2,12 @@ import S from "styled-components";
 import styles from '../../assets/css/variables';
 
 export const HeaderBackground = S.div `
-  background-color: ${styles.color.base.gray700}};
+  background-color: ${styles.color.product.blue}};
 `;
 
 export const BoxLogo = S.div `
   display: flex;
   justify-content: center;
-`;
-
-export const AllTasksTitle = S.span `
-  font-size: ${styles.fontSize.md};
-  color: ${styles.color.product.blue};
-  font-weight: bold;
-`;
-
-export const RemainTasksTitle = S.span `
-  text-align: right;
-  font-size: ${styles.fontSize.md};
-  color: ${styles.color.product.purple};
-  font-weight: bold;
-`;
-
-export const StatusHeading = S.div `
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: ${styles.space.lg};
-`;
-
-export const Counter = S.small `
-  color: ${styles.color.base.gray200};
-  font-weight: ${styles.fontWeight.bold};
-  font-size: ${styles.fontSize.sm};
-  padding: 2px ${styles.space.xs};
-  background-color: ${styles.color.base.gray400};
-  border-radius: 99px;
 `;
 
 export const Image = S.img `

@@ -15,6 +15,35 @@ export const Box = S.div `
   }
 `;
 
+export const AllTasksTitle = S.span `
+  font-size: ${styles.fontSize.md};
+  color: ${styles.color.product.blueLight};
+  font-weight: bold;
+`;
+
+export const CompletedTasksTitle = S.span `
+  text-align: right;
+  font-size: ${styles.fontSize.md};
+  color: ${styles.color.product.purple};
+  font-weight: bold;
+`;
+
+export const StatusHeading = S.div `
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: ${styles.space.lg};
+`;
+
+export const Counter = S.small `
+  color: ${styles.color.base.gray200};
+  font-weight: ${styles.fontWeight.bold};
+  font-size: ${styles.fontSize.sm};
+  padding: 2px ${styles.space.xs};
+  margin-left: ${styles.space.xs};
+  background-color: ${styles.color.base.gray400};
+  border-radius: 99px;
+`;
+
 export const LabelTitle = S.span `
   width: 90%;
   display: inline-block;
