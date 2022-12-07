@@ -1,5 +1,5 @@
 # 📝 To-do List 
-This is a to-do list in React. The layout is a reference from Figma Community. Check the reference [here](https://www.figma.com/proto/9O5KJwLi7b1NdgKFvELgVU/ToDo-List-%F0%9F%91%85-(Community)?node-id=12%3A106&starting-point-node-id=12%3A106).
+<!-- This is a to-do list in React. The layout is a reference from Figma Community. Check the reference [here](https://www.figma.com/proto/9O5KJwLi7b1NdgKFvELgVU/ToDo-List-%F0%9F%91%85-(Community)?node-id=12%3A106&starting-point-node-id=12%3A106).-->
 
 ## 💡 Tecnologies
 - Javascript
