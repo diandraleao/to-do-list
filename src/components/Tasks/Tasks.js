@@ -9,7 +9,7 @@ import * as S from './Style'
 import Logo from '../../assets/img/todo_logo.png'
 
 function Tasks() {
-  // tudo que faz no array de itens fica aqui
+  
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {

@@ -4,17 +4,14 @@ import * as S from './Style'
 import { LIST_TASK } from '../../utils/strings/pt-BR'
 import Trash from '../../assets/img/trash.svg'
 
-function Task( { tasks, removeTask, completeTask } ) {
+function Task( { tasks, deleteTask, completeTask } ) {
 
-  const [checkbox, setCheckbox] = useState(false)
+  // const [checkbox, setCheckbox] = useState(false)
   const [isCompleted, setCompleted] = useState(false);
 
-  const completeTaskHandler = (e) => {
-    setCheckbox()
-    setCompleted(!isCompleted);
-    console.log('completeTaskHandler')
-    completeTask()
-  }
+  // const completeTaskHandler = (e) => {
+  //   completeTask()
+  // }
 
   return (
     <>
@@ -27,7 +24,6 @@ function Task( { tasks, removeTask, completeTask } ) {
         </S.CompletedTasksTitle>
       </S.StatusHeading>
       {tasks.map((task, index) => (
-        console.log('index: ' + index),
         <S.Box key={'box-'+index}>
           <div>
             <input type="checkbox"
@@ -35,13 +31,13 @@ function Task( { tasks, removeTask, completeTask } ) {
             name={'task-' + task.id}
             value={task.completed}
             defaultChecked={task.completed}
-            onChange={(e) => (console.log(e))} />
-              <S.LabelTitle className={isCompleted ? 'completed' : ''}>
-                {task.title}
-              </S.LabelTitle>
-              <S.Button onClick={removeTask}>
-                <img src={Trash} alt='icone lixeira' />
-              </S.Button>
+            onChange={completeTask} />
+            <S.LabelTitle className={isCompleted ? 'completed' : ''}>
+              {task.title}
+            </S.LabelTitle>
+            <S.Button onClick={() => deleteTask(task.id)}>
+              <img src={Trash} alt='icone lixeira' />
+            </S.Button>
           </div>
         </S.Box>
       ))}
