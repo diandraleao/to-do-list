@@ -9,7 +9,7 @@ import * as S from './Style'
 import Logo from '../../assets/img/todo_logo.png'
 
 function Tasks() {
-
+  // tudo que faz no array de itens fica aqui
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {
@@ -18,11 +18,13 @@ function Tasks() {
 
   const addTask = task => {
     setTasks(currentTask => [...currentTask, task])
-    console.log('task added')
+    // console.log('task added')
   }
 
-  const removeTask = _ => {
-    console.log('removeTask')
+  const deleteTask = id => {
+    let filtered = tasks.filter((task) => task.id !== id);
+    setTasks(filtered);
+    console.log(filtered)
   }
 
   const completeTask = _ => {
@@ -43,7 +45,7 @@ function Tasks() {
           {
             (tasks.length > 0) ?
             <Task tasks={tasks}
-            removeTask={removeTask}
+            deleteTask={deleteTask}
             completeTask={completeTask} />
             : <Empty />
           }
