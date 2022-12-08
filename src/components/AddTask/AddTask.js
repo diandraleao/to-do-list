@@ -8,15 +8,13 @@ import { ADD_TASK } from '../../utils/strings/pt-BR'
 function AddTask(props) {
   
   const [description, setDescription] = useState('')
-  let arrayIds = []
-  let currentId = 1
+  const [descriptionId, setdescriptionId] = useState(0)
 
   const onSubmitHandler = event => {
     event.preventDefault()
 
-    arrayIds.push(currentId)
-    const task = {id: currentId, title: description, completed: false}
-    currentId += 1
+    const task = {id: descriptionId, title: description, completed: false}
+    setdescriptionId(descriptionId+1)
 
     if (!description) {
       console.log('Digite uma task')
@@ -24,7 +22,7 @@ function AddTask(props) {
     }
 
     props.addTask(task)
-    console.log('task submitted')
+    // console.log('task submitted')
     setDescription('');
   }
 
