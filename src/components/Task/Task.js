@@ -4,7 +4,7 @@ import * as S from './Style'
 import { LIST_TASK } from '../../utils/strings/pt-BR'
 import Trash from '../../assets/img/trash.svg'
 
-function Task( { tasks, deleteTask, completeTask } ) {
+function Task( { tasks, deleteTask, completeTask, remainingTasks } ) {
 
   // const [checkbox, setCheckbox] = useState(false)
   const [isCompleted, setCompleted] = useState(false);
@@ -17,7 +17,7 @@ function Task( { tasks, deleteTask, completeTask } ) {
     <>
       <S.StatusHeading>
         <S.AllTasksTitle>{LIST_TASK.headingCompleted}
-          <S.Counter>3</S.Counter>
+          <S.Counter>{remainingTasks}</S.Counter>
         </S.AllTasksTitle>
         <S.CompletedTasksTitle>{LIST_TASK.headingCompletedTasks}
           <S.Counter>1</S.Counter>

@@ -11,6 +11,7 @@ import Logo from '../../assets/img/todo_logo.png'
 function Tasks() {
   
   const [tasks, setTasks] = useState([])
+  const [remaining, setRemaining] = useState(0);
 
   useEffect(() => {
     // setTasks(mocks)
@@ -18,13 +19,13 @@ function Tasks() {
 
   const addTask = task => {
     setTasks(currentTask => [...currentTask, task])
+    setRemaining(remaining+1)
     // console.log('task added')
   }
 
   const deleteTask = id => {
-    let filtered = tasks.filter((task) => task.id !== id);
-    setTasks(filtered);
-    console.log(filtered)
+    setTasks(tasks.filter((task) => task.id !== id));
+    setRemaining(remaining-1)
   }
 
   const completeTask = _ => {
@@ -46,7 +47,8 @@ function Tasks() {
             (tasks.length > 0) ?
             <Task tasks={tasks}
             deleteTask={deleteTask}
-            completeTask={completeTask} />
+            completeTask={completeTask}
+            remainingTasks={remaining} />
             : <Empty />
           }
         </S.List></div>
