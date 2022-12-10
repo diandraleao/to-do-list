@@ -6,13 +6,6 @@ import Trash from '../../assets/img/trash.svg'
 
 function Task( { tasks, deleteTask, completeTask, remainingTasks } ) {
 
-  // const [checkbox, setCheckbox] = useState(false)
-  const [isCompleted, setCompleted] = useState(false);
-
-  // const completeTaskHandler = (e) => {
-  //   completeTask()
-  // }
-
   return (
     <>
       <S.StatusHeading>
@@ -26,13 +19,13 @@ function Task( { tasks, deleteTask, completeTask, remainingTasks } ) {
       {tasks.map((task, index) => (
         <S.Box key={'box-'+index}>
           <div>
-            <input type="checkbox"
+            <S.Input type="checkbox"
             id={'task-' + task.id}
             name={'task-' + task.id}
             value={task.completed}
             defaultChecked={task.completed}
-            onChange={completeTask} />
-            <S.LabelTitle className={isCompleted ? 'completed' : ''}>
+            onClick={() => completeTask(task.id)} />
+            <S.LabelTitle>
               {task.title}
             </S.LabelTitle>
             <S.Button onClick={() => deleteTask(task.id)}>

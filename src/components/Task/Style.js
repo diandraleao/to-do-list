@@ -44,7 +44,7 @@ export const Counter = S.small `
   border-radius: 99px;
 `;
 
-export const LabelTitle = S.span `
+export const LabelTitle = S.label `
   width: 90%;
   display: inline-block;
   margin-left: ${styles.space.sm};
@@ -55,7 +55,12 @@ export const LabelTitle = S.span `
   font-size: ${styles.fontSize.md};
   line-height: ${styles.lineHeight};
 
-  &.completed {
+`;
+
+export const Input = S.input `
+  display: inline;
+
+  &:checked + label {
     text-decoration: line-through;
     color: ${styles.color.base.gray300};
   }
