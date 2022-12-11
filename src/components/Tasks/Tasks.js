@@ -11,24 +11,20 @@ import Logo from '../../assets/img/todo_logo.png'
 function Tasks() {
   
   const [tasks, setTasks] = useState([])
-  const [remaining, setRemaining] = useState(0);
+  const [remaining, setremaining] = useState(0);
 
-  useEffect(() => {
-    // setTasks(mocks)
-  }, [])
 
   const addTask = task => {
     setTasks(currentTask => [...currentTask, task])
-    setRemaining(remaining+1)
-    // console.log('task added')
+    setremaining(remaining+1)
   }
 
   const deleteTask = id => {
     setTasks(tasks.filter((task) => task.id !== id));
-    setRemaining(remaining-1)
+    setremaining(remaining-1)
   }
 
-  const completeTask = _ => {
+  const completeTask = id => {
     console.log('completeTask')
   }
 
