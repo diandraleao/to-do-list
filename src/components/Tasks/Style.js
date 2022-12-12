@@ -3,7 +3,32 @@ import styles from '../../assets/css/variables';
 
 export const TopBar = S.div `
   display: block;
-  float: right;
+  position: absolute;
+  right: ${styles.space.xs};
+  top: ${styles.space.xs};
+`;
+
+export const TopBarButton = S.button `
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  border: transparent;
+  font-size: ${styles.fontSize.sm};
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:first-of-type {
+    margin-right: ${styles.space.xs};
+  }
+`;
+
+export const TopBarButtonIcon = S.img `
+  height: auto;
+  width: 26px;
+  display: block;
+  margin: 0 auto;
 `;
 
 export const HeaderBackground = S.div `

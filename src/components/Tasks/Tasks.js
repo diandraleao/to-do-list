@@ -7,6 +7,8 @@ import Empty  from '../Empty/Empty'
 import * as S from './Style'
 // import mocks from '../../utils/mocks/tasks'
 import Logo from '../../assets/img/todo_logo.png'
+import Brazil from '../../assets/img/icon-brazil.png'
+import Usa from '../../assets/img/icon-usa.png'
 
 
 function Tasks( { translate, changeLanguage }) {
@@ -32,12 +34,14 @@ function Tasks( { translate, changeLanguage }) {
   return (
     <>
     <S.TopBar>
-    <button onClick={() => changeLanguage("en")}>
+    <S.TopBarButton onClick={() => changeLanguage("en")} title={translate("languages.en")}>
+      <S.TopBarButtonIcon src={Usa} alt='icone' />
       {translate("languages.en")}
-    </button>
-    <button onClick={() => changeLanguage("pt")}>
+    </S.TopBarButton>
+    <S.TopBarButton onClick={() => changeLanguage("pt")} title={translate("languages.pt")}>
+      <S.TopBarButtonIcon src={Brazil} alt='icone' />
       {translate("languages.pt")}
-    </button>
+    </S.TopBarButton>
     </S.TopBar>
       <S.HeaderBackground>
         <S.BoxLogo>

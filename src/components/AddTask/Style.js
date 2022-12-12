@@ -14,6 +14,8 @@ export const Container = S.div `
   top: 150px;
   justify-self: center;
   align-self: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Title = S.h1 `
@@ -24,7 +26,7 @@ export const Title = S.h1 `
 
 export const Input = S.input `
   display: inline-block;
-  width: 603px;
+  width: 590px;
   background-color: ${styles.color.base.gray500};
   border: 1px solid ${styles.color.base.gray700};
   padding: ${styles.space.md};
