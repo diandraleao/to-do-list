@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import * as S from './Style'
-import { LIST_TASK } from '../../utils/strings/pt-BR'
 import Trash from '../../assets/img/trash.svg'
 
-function Task( { tasks, deleteTask, completeTask, remainingTasks } ) {
+function Task( { tasks, deleteTask, completeTask, remainingTasks, translate } ) {
 
   return (
     <>
       <S.StatusHeading>
-        <S.AllTasksTitle>{LIST_TASK.headingCompleted}
+        <S.AllTasksTitle>{translate("listTask.headingCompleted")}
           <S.Counter>{remainingTasks}</S.Counter>
         </S.AllTasksTitle>
-        <S.CompletedTasksTitle>{LIST_TASK.headingCompletedTasks}
+        <S.CompletedTasksTitle>{translate("listTask.headingCompletedTasks")}
           <S.Counter>1</S.Counter>
         </S.CompletedTasksTitle>
       </S.StatusHeading>

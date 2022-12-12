@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 
 import * as S from './Style'
 import Plus from '../../assets/img/plus.svg'
-import { ADD_TASK } from '../../utils/strings/pt-BR'
-// import randomIntFromInterval from '../../utils/handlers/Numbers'
 
-function AddTask(props) {
+function AddTask({ addTask, translate }) {
   
   const [description, setDescription] = useState('')
   const [descriptionId, setdescriptionId] = useState(0)
@@ -21,8 +19,7 @@ function AddTask(props) {
       return;
     }
 
-    props.addTask(task)
-    // console.log('task submitted')
+    addTask(task)
     setDescription('');
   }
 
@@ -30,17 +27,17 @@ function AddTask(props) {
     <S.Task>
       <S.Container>
         <form onSubmit={onSubmitHandler}>
-            <S.Title>{ADD_TASK.title}</S.Title>
+            <S.Title>{translate("addTask.taskTitle")}</S.Title>
             <div>
               <S.Input
                 type="text"
                 name="description"
                 value={description}
-                placeholder={ADD_TASK.labelTask}
+                placeholder={translate("addTask.labelTask")}
                 onChange={event => setDescription(event.target.value)}
                 required />
               <S.Button type="submit">
-                {ADD_TASK.labelButton}
+                {translate("addTask.labelButton")}
                 <img src={Plus} alt='icone de adicionar' />
               </S.Button>
             </div>

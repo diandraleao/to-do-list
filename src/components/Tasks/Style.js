@@ -1,6 +1,11 @@
 import S from "styled-components";
 import styles from '../../assets/css/variables';
 
+export const TopBar = S.div `
+  display: block;
+  float: right;
+`;
+
 export const HeaderBackground = S.div `
   background-color: ${styles.color.product.blue}};
 `;

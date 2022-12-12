@@ -1,0 +1,23 @@
+{
+  "languages": {
+    "en": "English",
+    "pt": "Portuguese"
+  },
+  
+  "addTask": {
+    "taskTitle": "New task*",
+    "labelTask": "Add a new task",
+    "labelButton": "Create",
+    "errorMessage": "Enter a task"
+  },
+
+  "listTask": {
+    "headingCompleted": "All tasks",
+    "headingCompletedTasks": "Completed"
+  },
+
+  "emptyList": {
+    "title": "You don't have tasks registered yet",
+    "subtitle": "Create tasks and organize your to-do items"
+  }
+}

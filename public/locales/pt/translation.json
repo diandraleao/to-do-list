@@ -1,0 +1,23 @@
+{
+  "languages": {
+    "en": "Inglês",
+    "pt": "Português"
+  },
+  
+  "addTask": {
+    "taskTitle": "Nova Tarefa*",
+    "labelTask": "Adicione uma nova tarefa",
+    "labelButton": "Criar",
+    "errorMessage": "Digite uma tarefa"
+  },
+
+  "listTask": {
+    "headingCompleted": "Todas as tarefas",
+    "headingCompletedTasks": "Concluídas"
+  },
+
+  "emptyList": {
+    "title": "Você ainda não tem tarefas cadastradas",
+    "subtitle": "Crie tarefas e organize os itens a fazer"
+  }
+}
