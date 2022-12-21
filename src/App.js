@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Tasks from './components/Tasks/Tasks'
+import Footer from './components/Footer/Footer'
 import { useTranslation } from "react-i18next";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Tasks translate={t} changeLanguage={changeLanguage} />
       </main>
+      <Footer translate={t} />
     </div>
   );
 }
