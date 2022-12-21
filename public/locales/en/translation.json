@@ -13,11 +13,13 @@
 
   "listTask": {
     "headingCompleted": "All tasks",
-    "headingCompletedTasks": "Completed"
+    "headingRemainingTasks": "Remaining"
   },
 
   "emptyList": {
     "title": "You don't have tasks registered yet",
     "subtitle": "Create tasks and organize your to-do items"
-  }
+  },
+
+  "footerSign": "coded by diandra leão"
 }
