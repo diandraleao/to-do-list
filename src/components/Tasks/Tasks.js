@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import AddTask from '../AddTask/AddTask'
 import Task from '../Task/Task'
@@ -14,22 +14,52 @@ import Usa from '../../assets/img/icon-usa.png'
 function Tasks( { translate, changeLanguage }) {
   
   const [tasks, setTasks] = useState([])
-  const [remaining, setremaining] = useState(0);
+  const [remaining, setRemaining] = useState(null);
 
 
   const addTask = task => {
     setTasks(currentTask => [...currentTask, task])
-    setremaining(remaining+1)
+    setRemaining(remaining+1)
   }
 
   const deleteTask = id => {
     setTasks(tasks.filter((task) => task.id !== id));
-    setremaining(remaining-1)
+    setRemaining(remaining-1)
   }
 
   const completeTask = id => {
+    
+    const newTasks = tasks;
+    const completed = !tasks[id].completed;
+
+    newTasks[id].completed = completed;
+
+    setTasks([...newTasks]);
+
     console.log('completeTask')
+    return;
   }
+
+  
+  const handleRemainTasks = (tasks) => {
+    if (!tasks.length) return null;
+
+    const newRemaining = tasks.reduce((acm, { completed }) => {
+      if (completed) {
+        return acm;
+      }
+
+      return (acm += 1);
+    }, 0);
+
+    setRemaining(newRemaining);
+    return;
+  };
+
+  useEffect(() => {
+    handleRemainTasks(tasks);
+  }, [tasks]);
+
 
   return (
     <>
