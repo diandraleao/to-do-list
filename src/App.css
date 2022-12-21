@@ -1,32 +1,32 @@
 .App {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  color: #212529;
+  color: #1a1a1a;
 }
+
 
 @media (min-width: 576px) {
   .App {
-    max-width: 540px;
+    /* max-width: 540px; */
+    background-color: #1A1A1A;
   }
 }
 
 @media (min-width: 768px) {
   .App {
-    max-width: 720px;
+    /* max-width: 720px; */
   }
 }
 
 @media (min-width: 992px) {
   .App {
-    max-width: 960px;
+    /* max-width: 960px; */
   }
 }
 
 @media (min-width: 1200px) {
   .App {
-    max-width: 1140px;
+    /* max-width: 100%; */
   }
 }
