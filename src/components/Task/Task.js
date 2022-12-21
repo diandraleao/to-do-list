@@ -9,10 +9,10 @@ function Task( { tasks, deleteTask, completeTask, remainingTasks, translate } ) 
     <>
       <S.StatusHeading>
         <S.AllTasksTitle>{translate("listTask.headingCompleted")}
-          <S.Counter>{remainingTasks}</S.Counter>
+          <S.Counter>{tasks.length}</S.Counter>
         </S.AllTasksTitle>
-        <S.CompletedTasksTitle>{translate("listTask.headingCompletedTasks")}
-          <S.Counter>1</S.Counter>
+        <S.CompletedTasksTitle>{translate("listTask.headingRemainingTasks")}
+          <S.Counter>{remainingTasks}</S.Counter>
         </S.CompletedTasksTitle>
       </S.StatusHeading>
       {tasks.map((task, index) => (
