@@ -8,33 +8,6 @@ This is a to-do list in React, for study.
 - Styled-components
 - Webpack
 
-## 🔐 Available scripts
-In the project directory, you can run the following commandss:
-
-```sh
-npm start
-```
-Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
-
-```sh
-npm build
-```
-Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
-
-```sh
-npm test
-```
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://create-react-app.dev/docs/running-tests/) for more information.
-
-```sh
-npm eject
-```
-This project was been created using create-react-app, and CRA uses encapsulates all of the npm modules it is using internally, so that your package.json will be very clean and simple without you having to worry about it.
-
-However, if you want to start doing more complex things and installing modules that may interact with modules create-react-app is using under the hood, those new modules need to know what is available and not, meaning you need to have create-react-app un-abstract them.
-
-That, in essence, is what react-scripts eject does. It will stop hiding what it's got installed under the hood and instead eject those things into your project's package.json for everyone to see.
-
 ## ⚡️ Install dependencies 
 
 ```sh
